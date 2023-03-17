@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="maincss.css">
+    </head>
+    <body>
+        <div class="loginbox">
+            <h1 class="loginh1">Login page</h1>
+            <h2 class="loginh2">Working 100%!!!</h2>
+            <br><br><br>
+            <form>
+                <input type="text" id="username" value="..."class="inputLogin">
+                <br>
+                <input type="password" id="password" class="inputLogin">
+                <br>
+                <input type="button" onclick="logIn()" class="inputLoginButton">
+            </form>
+
+            <h2 id="outputbox" class="loginh2"></h2>
+
+        </div>
+        <script>
+            
+            function output(a){
+                var outputbox = document.getElementById('outputbox').innerHTML=a
+                
+            }
+
+
+            function logIn(){
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+
+                if(username == "czarnobrody01" && password=="123")
+                {
+                        output('poprawnie zalgowano')
+                        window.location.href = "mainpage.html";
+
+                } 
+                else if(username=="..." && password=="") 
+                { 
+                    output('Uzupełnij pola powyżej')
+                } 
+                else
+                {
+                    output('Nieprawidłowa nazwa lub hasło')
+                }
+                
+            }
+        </script>
+        
+    </body>
+</html>
