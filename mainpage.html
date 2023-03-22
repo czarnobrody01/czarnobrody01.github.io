@@ -3,8 +3,10 @@
         <link rel="stylesheet" type="text/css" href="maincss.css">
     </head>
     <body>
+
+      
         <div class="leftPanel">
-            <h3><a href="https://czarnobrody01.github.io/mainpage.html">Strona Główna</a></h3>
+            <p class="h3copy" style="font-size: 20;"><a href="https://czarnobrody01.github.io/mainpage.html">Strona Główna</a></p>
             <h3><a href="https://czarnobrody01.github.io/aplikacjeinternetowe.html">Aplikacje Internetowe</a></h3>
             <h3><a href="https://mega.nz/folder/D4x1zCga#JXpnj0n1hLEXhkHk2Hb7Jw">PendriveSave</a></h3>
             <h3><a href="">- - - </a></h3>
@@ -13,10 +15,65 @@
         <div class="baner">
             <h1>elo elo</h1><h3>Strona made by czarnobrody01</h3>
         </div>
+
         
         <div class="MainPageBox">
-            <h1>---</h1>
-            <h3>---</h3>
+            <h1>Witaj na stronie głównej</h1>
+            <p id="dzien" class="h3copy"></p>
         </div>
+
+        <div class="MainPageBox">
+            <h1>box nr2</h1>
+            <h3>blyblyblyblyblyblyblybly</h3>
+        </div>
+        <div class="MainPageBox">
+            <h1>box nr3</h1>
+            <h3>blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>
+                blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>blyblyblyblyblyblyblyblyblyblyblybly<br>
+            </h3>
+        </div>
+        
+        <script>
+            
+            var dzien = "nieznany";
+            var data = new Date();
+            switch(data.getDay()){
+            case 0 : dzien = "niedziela"; break;
+            case 1 : dzien = "poniedziałek"; break;
+            case 2 : dzien = "wtorek"; break;
+            case 3 : dzien = "środa"; break;
+            case 4 : dzien = "czwartek"; break;
+            case 5 : dzien = "piątek"; break;
+            case 6 : dzien = "sobota"; break;
+            }
+            var miesiac = "nieznany";
+            switch(data.getMonth()){
+            case 0 : miesiac = "styczenia"; break;
+            case 1 : miesiac = "lutego"; break;
+            case 2 : miesiac = "marca"; break;
+            case 3 : miesiac = "kwietnia"; break;
+            case 4 : miesiac = "maja"; break;
+            case 5 : miesiac = "czerwca"; break;
+            case 6 : miesiac = "lipca"; break;
+            case 7 : miesiac = "sierpnia"; break;
+            case 8 : miesiac = "września"; break;
+            case 9 : miesiac = "października"; break;
+            case 10 : miesiac = "listopada"; break;
+            case 11 : miesiac = "grudnia"; break;
+            }
+            var numerDnia = new Date().getDate()
+            var hour = new Date().getHours()
+            var minute = new Date().getMinutes()
+
+            document.getElementById("dzien").innerHTML=("Dzisiaj jest <u>"+dzien+" "+numerDnia+" "+miesiac+"</u>. Godzina <u>"+hour+":"+minute+"</u>");
+        </script>
+
+
     </body>
 </html>

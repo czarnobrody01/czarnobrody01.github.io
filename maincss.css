@@ -67,28 +67,34 @@ body{
     border-style: solid;
     border-color: #fff;
 }
-/*LOG IN PAGE*/
-
-/*MAIN PAGE*/
+/*--------------------------------LOG IN PAGE--------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------MAIN PAGE--------------------------------*/
 .leftPanel{
-    margin-top: 10%;
+    float: left;
+    clear: both;
+    margin-top: -10%;
     width: 10%;
-    height: 120%;
-    
+    height: 100%;
+    padding-top: 10%;
+
     background-color: rgb(35, 35, 102); 
     border: 3px;
     border-style: solid;
     border-color: rgb(30, 30, 88);
-    position:fixed;
+    position: fixed
 }
 .baner{
-    width: 100%;
+    
+    padding-left: 20%;
+    margin-top: 0%;
+    width: 80%;
     background-color: rgb(35, 35, 102); 
     height: 10%;
     border: 3px;
     border-style: solid;
     border-color: rgb(30, 30, 88);
-    position: fixed;
+    position: static;
 
 }
 
@@ -104,10 +110,15 @@ h3{
     color:aliceblue;
 }
 
+.h3copy{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15;
+    color:aliceblue;
+}
+
 a:hover{
     text-decoration: underline;
     text-decoration-thickness: 3px;
-
 }
 a{
    text-decoration: underline;
@@ -119,11 +130,11 @@ a:link, a:visited{
 
 .MainPageBox{
     margin-left: 20%;
-    margin-top: 20%;
+    margin-top: 10%;
     width: 70%;
     background-color: rgb(35, 35, 102); 
 
     border-style: solid;
     border-color: rgb(30, 30, 88);
-    position:absolute;
+    position: relative;
 }
