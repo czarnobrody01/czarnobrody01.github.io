@@ -56,6 +56,11 @@ body{
     border-style: solid;
     border-color: #fff;
 }
+.inputLoginButton:active{
+    border: 2px;
+    border-style: solid;
+    border-color: #fff;
+}
 
 .inputLogin:hover{
     border: 1px;
@@ -68,13 +73,13 @@ body{
 .leftPanel{
     margin-top: 10%;
     width: 10%;
-    height: 90%;
+    height: 120%;
     
     background-color: rgb(35, 35, 102); 
     border: 3px;
     border-style: solid;
     border-color: rgb(30, 30, 88);
-    position: absolute;
+    position:fixed;
 }
 .baner{
     width: 100%;
@@ -83,7 +88,7 @@ body{
     border: 3px;
     border-style: solid;
     border-color: rgb(30, 30, 88);
-    position: absolute;
+    position: fixed;
 
 }
 
@@ -91,4 +96,34 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30;
     color:aliceblue;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15;
+    color:aliceblue;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+
+}
+a{
+   text-decoration: underline;
+    font-weight: bold;
+}
+a:link, a:visited{
+    color: aliceblue;
+}
+
+.MainPageBox{
+    margin-left: 20%;
+    margin-top: 20%;
+    width: 70%;
+    background-color: rgb(35, 35, 102); 
+
+    border-style: solid;
+    border-color: rgb(30, 30, 88);
+    position:absolute;
 }
