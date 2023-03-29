@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="maincss.css">
+        <style>
+            #czerwone{
+            width: 35px;
+            height: 35px;
+            background-color: red;
+            } 
+            #zielone{
+            width: 35px;
+            height: 35px;
+            background-color: green;
+            } 
+            #niebieskie{
+            width: 35px;
+            height: 35px;
+            background-color: blue;
+            } 
+            #procenty{
+                width: 50px;
+            }
+            #form{
+            line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="leftPanel">
+            <h3><a href="https://czarnobrody01.github.io/mainpage.html">Strona Główna</a></h3>
+            <h3><a href="https://czarnobrody01.github.io/aplikacjeinternetowe.html">Aplikacje Internetowe</a></h3>
+            <h3><a href="https://mega.nz/folder/D4x1zCga#JXpnj0n1hLEXhkHk2Hb7Jw">PendriveSave</a></h3>
+            <h3><a href="">- - - </a></h3>
+        </div>
+        <div class="baner">
+            <h1>elo elo</h1><h3>Strona made by czarnobrody01</h3>
+        </div>
+        <div class="MainPageBox">
+            <h3>
+                <form id="form">
+                    Podaj rozmiar tekstu w procentach :<input type="number" id="procenty" value="100">
+                    <br>
+                    Wybierz rodzaj czcionki :<select id="listaSelect">
+                        <option value="1">zwykly</option>
+                        <option value="2" >kursywa</option>
+                        <option value="3">pogrubienie</option>
+                    </select>
+                    <br>
+                    Wybierz kolor tekstu: 
+                    <input type="button" id="czerwone" onclick="czerwoneFunkcja()">
+                    <input type="button" id="zielone" onclick="zieloneFunkcja()">
+                    <input type="button" id="niebieskie" onclick="niebieskieFunkcja()">
+                </form>
+            </h3>
+        </div>
+
+        <script>
+        
+        var select = document.getElementById("listaSelect")
+        var wynikbox = document.getElementById("wynikbox");
+        //var rozmiar = document.getElementById("procenty").value;
+        //var rozmiarProcent = +rozmiar+"%"
+
+        const dane = {
+            getRozmiar: function(){
+                var rozmiar = document.getElementById("procenty").value;
+                return rozmiarProcent = +rozmiar+"%"
+            },
+            getRodzaj: function(){
+                var rodzaj = select.value;
+                    
+                if(rodzaj==1){
+                    return czcionka="normal"
+                }
+                else if(rodzaj==2){
+                    return czcionka="italic"
+                }
+                else if(rodzaj==3){
+                    return czcionka="normal"
+                }
+            },
+            getPogrubienie: function czyPogrubienie(){
+                var pogrubienie = select.value;
+
+                if(pogrubienie==3){
+                    return "bold"
+                }else{
+                    return "normal"
+                }
+            }
+        } 
+    
+        
+        function czerwoneFunkcja(){
+            
+            styl = dane.getRodzaj()
+            
+            document.getElementById("wynikbox").style.color='red'
+            document.getElementById("wynikbox").style.fontSize=dane.getRozmiar()
+            document.getElementById("wynikbox").style.fontStyle=dane.getRodzaj()
+            document.getElementById("wynikbox").style.fontWeight=dane.getPogrubienie()
+
+        }
+        function zieloneFunkcja(){
+            
+            styl = dane.getRodzaj()
+            
+            document.getElementById("wynikbox").style.color='green'
+            document.getElementById("wynikbox").style.fontSize=dane.getRozmiar()
+            document.getElementById("wynikbox").style.fontStyle=dane.getRodzaj()
+            document.getElementById("wynikbox").style.fontWeight=dane.getPogrubienie()
+
+        }
+        function niebieskieFunkcja(){
+            
+            styl = dane.getRodzaj()
+            
+            document.getElementById("wynikbox").style.color='blue'
+            document.getElementById("wynikbox").style.fontSize=dane.getRozmiar()
+            document.getElementById("wynikbox").style.fontStyle=dane.getRodzaj()
+            document.getElementById("wynikbox").style.fontWeight=dane.getPogrubienie()
+
+        }
+
+        
+        </script>
+        <div class="MainPageBox">
+            <h3>Wybrane formatowanie tekstu:</h3>
+            <p id="wynikbox">test</p>
+        </div>
+    </body>
+</html>
