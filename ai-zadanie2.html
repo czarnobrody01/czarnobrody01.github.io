@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="maincss.css">
+        <style>
+            #wynikbox{
+
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 15;
+                color:aliceblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="leftPanel">
+            <h3><a href="https://czarnobrody01.github.io/mainpage.html">Strona Główna</a></h3>
+            <h3><a href="https://czarnobrody01.github.io/aplikacjeinternetowe.html">Aplikacje Internetowe</a></h3>
+            <h3><a href="https://mega.nz/folder/D4x1zCga#JXpnj0n1hLEXhkHk2Hb7Jw">PendriveSave</a></h3>
+            <h3><a href="">- - - </a></h3>
+        </div>
+        <div class="baner">
+            <h1>elo elo</h1><h3>Strona made by czarnobrody01</h3>
+        </div>
+        <div class="MainPageBox">
+            <h3>
+                <form id="form">
+                    Początkowa liczba:
+                    <input type="number" id="startvalue" value="1"><br>
+                    Wielkosc inkrementacji:
+                    <input type="number" id="r" value="2"><br>
+                    Ilość powtórzeń:
+                    <input type="number" id="n" value="5"><br>
+                    <br>
+                    <br>
+                    Generuj ciąg:
+                    <button type="button" id="czerwone" onclick="guzik()">Stwórz</button>
+                </form>
+            </h3>
+        </div>
+
+        <script>
+        
+       function guzik(){
+
+        
+        var start = parseInt(document.getElementById('startvalue').value);
+        var r = document.getElementById('r').value;
+        var n = document.getElementById('n').value;
+        const box = document.getElementById('wynikbox');
+        
+        box.innerHTML = null
+
+        for (let i = 1; i<=n; i++){
+
+            
+            var wynik = document.createTextNode(start+', ')
+            box.appendChild(wynik)
+
+            start += parseInt(r)
+
+        }
+        
+
+       }
+    
+        
+        
+        </script>
+        <div class="MainPageBox" id="wynikbox">
+            <h3 id="wynikparagraf"></h3>
+        </div>
+    </body>
+</html>
